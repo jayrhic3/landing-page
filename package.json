@@ -1,0 +1,21 @@
+{
+  "name": "landing_app",
+  "version": "1.0.0",
+  "description": "landing page template",
+  "author": "jayrhic3",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "nuxt": "^2.0.0",
+    "tailwindcss-animatecss": "^0.2.7"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}
