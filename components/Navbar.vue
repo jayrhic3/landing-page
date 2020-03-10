@@ -9,35 +9,36 @@
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
         </button>
     </div>
-    <div :class="isOpen ? 'block' : 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto px-10">
+    <div :class="isOpen ? 'hidden' : 'block bg-green-900 pb-10 '" class=" w-full block flex-grow lg:flex lg:items-center lg:w-auto px-10">
     <div class="text-sm lg:flex-grow">
       
     </div>
     <div>
       <a class="text block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
         <nuxt-link to="/about">About</nuxt-link>
-      </a>
-      <button class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-gray-400 hover:text-white bg-green-900 border-green-500 border hover:bg-transparent mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg" @click="toggleModal">Login</button>
-      <button class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-white hover:text-white bg-green-500 hover:bg-green-700 mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg" >Sign up now</button>
-    </div>
+      
+      <button class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-gray-400 hover:text-white bg-green-900 border-green-500 border hover:bg-transparent mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg" >Login</button>
+      <button class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-white hover:text-white bg-green-500 hover:bg-green-700 mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg" @click="toggleModal">Sign up now</button>
+		</a>
+	</div>
   </div>
   </nav>
 
-  <div v-if="modal" @click.self="toggleModal" class="w-screen fixed z-50 pin that bg-smoke">
-			<div class="flex justify-center py-32">
+  <div v-if="modal" @click.self="toggleModal" class="w-screen fixed z-50 pin bg-smoke">
+			<div class="flex justify-center px-6 my-5 md:my-56 lg:my-24" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease">
 				<!-- Row -->
-				<div class="w-full px-64 flex">
+				<div class="w-full xl:w-3/4 lg:w-11/12 flex">
 					<!-- Col -->
-					<div
-						class="w-9/12 bg-gray-400 hidden lg:block  bg-cover rounded-l-lg beck"
-					></div>
+					<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg beck">
+					
+					</div>
 					<!-- Col -->
-					<div class="w-full bg-gray-900 rounded-lg lg:rounded-l-none">
-            <span @click="toggleModal" class="absolute right-0 md:px-64 px-40">
+					<div class="w-full lg:w-7/12 bg-gray-900 p-5 rounded-lg lg:rounded-l-none">
+            <span @click="toggleModal" class="absolute right-0 px-4 lg:px-56">
               <svg class="h-12 w-12 text-white hover:text-gray-100" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
             </span>
 						<h3 class="pt-4 text-2xl text-center text-white">Create an Account!</h3>
-						<form class="px-10 pt-6 pb-8 mb-4 bg-gray-900 rounded">
+						<form class="px-8 pt-6 pb-8 mb-4 bg-gray-900 rounded">
 							<div class="mb-4 md:flex md:justify-between">
 								<div class="mb-4 md:mr-2 md:mb-0">
 									<label class="block mb-2 text-sm font-bold text-green-300" for="firstName">
@@ -184,6 +185,6 @@ nav.scrolled {
 }
 
 .that {
-	overflow: hidden;
+	overflow: auto;
 }
 </style>
