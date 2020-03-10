@@ -18,26 +18,26 @@
         <nuxt-link to="/about">About</nuxt-link>
       </a>
       <button class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-gray-400 hover:text-white bg-green-900 border-green-500 border hover:bg-transparent mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg" @click="toggleModal">Login</button>
-      <button href="#" class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-white hover:text-white bg-green-500 hover:bg-green-700 mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg">Sign up now</button>
+      <button class="transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none rounded text-white hover:text-white bg-green-500 hover:bg-green-700 mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-lg" >Sign up now</button>
     </div>
   </div>
   </nav>
 
-  <div v-if="modal" @click.self="toggleModal" class="fixed z-50 pin mx-auto bg-smoke">
-			<div class="flex justify-center px-56 py-20">
+  <div v-if="modal" @click.self="toggleModal" class="w-screen fixed z-50 pin that bg-smoke">
+			<div class="flex justify-center py-32">
 				<!-- Row -->
-				<div class="w-full px-5 flex">
+				<div class="w-full px-64 flex">
 					<!-- Col -->
 					<div
-						class="w-5/12 bg-gray-400 hidden lg:block  bg-cover rounded-l-lg beck"
+						class="w-9/12 bg-gray-400 hidden lg:block  bg-cover rounded-l-lg beck"
 					></div>
 					<!-- Col -->
-					<div class="w-screen bg-gray-900 pr-64 rounded-lg lg:rounded-l-none">
-            <span @click="toggleModal" class="absolute right-0 pt-0 px-56">
-              <svg class="h-12 w-12 text-grey hover:text-grey-darkest" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+					<div class="w-full bg-gray-900 rounded-lg lg:rounded-l-none">
+            <span @click="toggleModal" class="absolute right-0 md:px-64 px-40">
+              <svg class="h-12 w-12 text-white hover:text-gray-100" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
             </span>
 						<h3 class="pt-4 text-2xl text-center text-white">Create an Account!</h3>
-						<form class="px-2 pt-6 pb-8 mb-4 bg-gray-900 rounded">
+						<form class="px-10 pt-6 pb-8 mb-4 bg-gray-900 rounded">
 							<div class="mb-4 md:flex md:justify-between">
 								<div class="mb-4 md:mr-2 md:mb-0">
 									<label class="block mb-2 text-sm font-bold text-green-300" for="firstName">
@@ -139,7 +139,7 @@ export default {
       view: {
             atTopOfPage: true
         },
-      modal: false,
+	  modal: false,
     }
   },
   beforeMount () {
@@ -148,7 +148,7 @@ export default {
 methods: {
   toggleModal() {
       this.modal = !this.modal
-    },
+	},
 	// the function to call when the user scrolls, added as a method
     handleScroll(){
         // when the user scrolls, check the pageYOffset
@@ -181,5 +181,9 @@ nav.scrolled {
 
 .beck {
 	background-image: url('~assets/images/login1.jpg');
+}
+
+.that {
+	overflow: hidden;
 }
 </style>
