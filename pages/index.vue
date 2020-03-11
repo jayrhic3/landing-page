@@ -25,10 +25,10 @@
     <div class="bg-white">
     <div class="px-20 py-10 md:py-20 lg:py-20">
       <div class="w-full text-green-900" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-        <div class="text-3xl text-center md:text-5xl md:text-left lg:text-5xl lg:text-left font-bold">Our Services</div>
-        <div class="text-base text-center md:text-lg md:text-left lg:text-lg lg:text-left">List of e-Services of City of Mati Local Government System</div>
+        <div class="text-4xl text-center md:text-5xl md:text-left lg:text-5xl lg:text-left font-bold">Our Services</div>
+        <div class="text-lg text-center md:text-lg md:text-left lg:text-lg lg:text-left">List of e-Services of City of Mati Local Government System</div>
       </div>
-      <div class="block mb-4 md:py-20 lg:py-20 md:flex lg:flex">
+      <div class="block mb-4 py-10 md:py-20 lg:py-20 md:flex lg:flex">
         <div class="w-full md:w-1/2 lg:w-1/2 md:h-12 lg:h-12 ">
           <div class="flex md:flex-row-reverse flex-wrap" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
             <div class="w-full md:w-3/4  p-4 text-center text-green-900"><div class="text-base text-center md:text-left lg:text-left"><p class="font-bold text-2xl">Community Tax CertificateCTC / CEDULA</p>Allows individuals and corporations to apply online and secure a Cedula upon payment of the community tax.</div></div>
