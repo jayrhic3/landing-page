@@ -179,8 +179,8 @@
 								<button
 									class="w-full px-4 py-2 font-bold text-white bg-green-700 rounded-full hover:bg-green-900 focus:outline-none focus:shadow-outline"
 									type="button"
-								>
-									Sign In
+								><nuxt-link to="/profile">
+									Sign In</nuxt-link>
 								</button>
 							</div>
 							<hr class="mb-6 border-t" />
@@ -201,7 +201,7 @@
 								</a>
 							</div>
 						</form>
-					</div>
+					</div> 
 				</div>
 			</div>
 		</div>
@@ -251,8 +251,7 @@ nav {
 }
 
 nav.scrolled {
-    @apply transition;
-    @apply bg-green-700;
+    @apply bg-green-900;
     border-bottom: 0px;
 }
 

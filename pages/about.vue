@@ -2,14 +2,14 @@
 <div>
   <Navbar />
 
-    <div class="bg-green-700">
+    <div class="bg-green-900">
       <div class="container2">
 
       </div>
     </div>
     <div class="back h-full">
     <div class="text-white text-center">
-      <div class="container3">
+      <div class="container3 shadow-2xl">
         <div class="text-6xl font-bold pt-10">About</div>
         <div class="text-lg">City of Mati Local Government System</div>
       </div>
@@ -59,7 +59,7 @@ export default {
 
 .container2 {
   margin: 0 auto;
-  min-height: 13vh;
+  min-height: 11vh;
   display: flex;
   justify-content: center;
   align-items: center;
