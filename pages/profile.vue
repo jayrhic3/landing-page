@@ -1,5 +1,6 @@
 <template>
 <div>
+<<<<<<< HEAD
     <Navbar2 />
 <div class="px-40 pt-20">
     <div class="flex mb-4 py-5 shadow-2xl pb-16">
@@ -14,6 +15,30 @@
                 Application
             </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none hover:text-green-500 border-b-2  border-white hover:font-medium hover:border-green-500">
                 Help
+=======
+    <Logout />
+<div class="px-20 mt-20">
+    <div class="flex mb-4 py-5 shadow-2xl pb-16">
+        <div class="w-1/6 h-12 pl-10">
+        <button class="bg-indigo hover:bg-indigo-dark text-white font-bold py-2 px-4 w-full inline-flex items-center">
+         <!-- <svg fill="#FFF" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                    </svg> -->
+        <img src ="@/assets/images/avatar.png" class="h-20">
+        </button>
+        </div>
+        <div class="w-5/6  h-12">
+        <h1><b>Unknown Unknown</b></h1>
+        <p class="text-xs">unknown@gmail.com</p>
+        <nav class="flex flex-col sm:flex-row">
+            <button class="active">
+                 <nuxt-link to="/profile"> Profile</nuxt-link>
+            </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none">
+                <nuxt-link to="/transaction">Application</nuxt-link>
+            </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none">
+               <nuxt-link to="/Help"> Help</nuxt-link>
+>>>>>>> a9073120ad8c06fa26aa79d32038cbb2b3b51d72
                 </button>
         </nav>
         </div>
@@ -59,35 +84,41 @@
         </div>
     </div>
     <div class="flex mb-4 pb-16">
+<<<<<<< HEAD
         <div class="w-1/3 bg-white rounded shadow-2xl  ">
          <div class="flex mt-4 p-2 m-2">
             <h5 class="text-grey-darkest"><b>Personal information</b></h5>
+=======
+        <div class="w-1/3 bg-white rounded shadow" data-aos="fade-down-left">
+         <div class="flex mt-4 p-1 m-1">
+            <h5 class="text-grey-darkest text-sm"><b>Personal Information</b></h5>
+>>>>>>> a9073120ad8c06fa26aa79d32038cbb2b3b51d72
             <div class="ml-16">
                 <button href="#" style="float:right" class="text-md transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Edit</button>
            </div>
            </div>
-            <div class="border-b-2 m-0"></div>
+            <div class="border-b-2 m-0 px-2"></div>
             <div class="p-2 m-2">
                 <table class="table-fixed">
                      <tbody class="text-xs">
                         <tr>
                         <td class="border px-4 py-2">Firstname:</td>
-                        <td class="border px-4 py-2">Maribel</td>
+                        <td class="border px-4 py-2">Unknown</td>
                         </tr>
                         <tr>
                         <td class="border px-4 py-2">Middlename:</td>
-                        <td class="border px-4 py-2">Lukban</td>
+                        <td class="border px-4 py-2">Unknown</td>
                         </tr>
                         <tr>
                         <td class="border px-4 py-2">Lastname:</td>
-                        <td class="border px-4 py-2">Sapugay</td>
+                        <td class="border px-4 py-2">Unknown</td>
                         </tr>
                         <tr>
                         <td class="border px-4 py-2">Email Address:</td>
-                        <td class="border px-4 py-2">renghianbel2124@gmail.com</td>
+                        <td class="border px-4 py-2">unknown@gmail.com</td>
                         </tr>
                         <tr>
-                        <td class="border px-4 py-2">Mobile Nummber:</td>
+                        <td class="border px-4 py-2">Mobile Number:</td>
                         <td class="border px-4 py-2">12345678901</td>
                         </tr>
                         <tr>
@@ -98,9 +129,14 @@
                 </table>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="w-2/3 bg-white rounded ml-4 shadow-2xl w-full  ">
+=======
+        <div class="w-2/3 bg-white rounded ml-4 shadow w-full" data-aos="fade-down-right">
+>>>>>>> a9073120ad8c06fa26aa79d32038cbb2b3b51d72
         <div class="flex mt-4 p-4 m-4">
             <h5 class="text-grey-darkest"><b>Transaction History (0)</b></h5>
+            <div class="border-b-2 m-0 px-2"></div>
             <div  style="float:right">
                 <select class="form-select mt-1 block w-full" style="float:right">
                     <option></option>
@@ -131,15 +167,31 @@
             Refresh</button>
         </div>
         </div>
+        <div class="flex mt-4 p-4 m-4">
+            <center><img src ="@/assets/images/no_item.jpg" width="30%"></center>
+        </div>
     </div>
+    <!-- <div class="flex mb-4 pb-16 bg-gray-500">
+        <div class="w-1/3 bg-white rounded shadow" data-aos="fade-down-left">
+         <div class="flex mt-4 p-2 m-2">
+            <h5 class="text-grey-darkest"><b>We Accept Payment Visa</b></h5>
+         </div>
+        </div>
+    </div> -->
 </div> 
 </div>
+<<<<<<< HEAD
 <Footer2 />
 </div>
 
+=======
+<Footer />
+</div>
+>>>>>>> a9073120ad8c06fa26aa79d32038cbb2b3b51d72
 </template>
 
 <script>
+<<<<<<< HEAD
 import Navbar2 from '@/components/Navbar2.vue'
 import Footer2 from '@/components/Footer2.vue'
 
@@ -173,4 +225,24 @@ export default {
 .bg-smoke {
   background-color: rgba(0, 0, 0, 0.5);
 }
+=======
+import Logout from '~/components/Logout.vue' 
+import Footer from '~/components/Footer.vue'
+export default {
+     name: 'HelpComponent',
+    components: {
+        Logout,
+        Footer
+    }
+}
+</script>
+<style scoped>
+ .active  {
+        border-bottom-color: #000000;
+        color: rgb(33, 167, 89);
+        border-bottom: 3px solid;
+        font-weight: bold;
+        padding: 1rem;
+    }
+>>>>>>> a9073120ad8c06fa26aa79d32038cbb2b3b51d72
 </style>
