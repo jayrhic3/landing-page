@@ -25,15 +25,17 @@
             <modal />
     </div>
     </div>
-    <div class="flex mb-4 pb-16 bg-white" v-show="isEdit === true">
-          <h1 class="text-lg"><b>Edit Profile</b></h1>
-          <div class="px-10 py-10">
-              <img src ="@/assets/images/avatar.png" class="h-20 py-2 pl-10 align-center">
-    <label class="text-sm transition duration-500 ease-in-out inline-block text-sm px-10 py-2 px-12 leading-none text-white hover:text-white bg-green-500 hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">
-        Upload Photo
-        <input type='file' class="hidden" />
-    </label>
-</div>
+    <div class="flex mb-4 pb-16 bg-white font-mono" v-show="isEdit === true">
+        <div class="block">
+          <h1 class="text-lg font-bold px-10 py-10">Edit Profile</h1>
+          <div class="px-10 justify-center">
+              <img src ="@/assets/avatar/5.png" class="h-40 py-2 pl-5">
+                <label class="text-sm transition cursor-pointer duration-500 ease-in-out inline-block text-sm py-2 px-12 leading-none text-white hover:text-white bg-green-500 hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">
+                    Upload Photo
+                    <input type='file' class="hidden" />
+                </label>
+            </div>
+        </div>
       <div class="bg-transparent shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
   <div class="-mx-3 md:flex mb-6">
     <div class="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -83,7 +85,7 @@
     <p class="text-red text-xs italic">Please fill out this field.</p>
     </div>
   </div>
-  <div class="w-1/5 relative">
+  <div class="relative ml-64 pl-64">
   <button href="#" @click="back()" class=" text-md transition duration-500 ease-in-out text-sm px-4 py-2 leading-none text-black hover:text-white bg-white hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Cancel</button>
   <button href="#" @click="UpdateSubmit ()" class=" text-md transition duration-500 ease-in-out text-sm px-4 py-2 leading-none text-white hover:text-white bg-green-500 hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Update Profile</button>
   </div>
