@@ -6,6 +6,11 @@
 */
 module.exports = {
   theme: {
+    fontFamily: {
+      'sans': ['-apple-system', 'BlinkMacSystemFont',],
+      'serif': ['Georgia', 'Cambria',],
+      'mono': ['Poppins','Helvetica Neue','Helvetica','Arial','sans-serif']
+          },
     screens: {
       sm: '640px',
       md: '768px',

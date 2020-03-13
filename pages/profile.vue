@@ -1,76 +1,108 @@
 <template>
 <div>
     <Navbar2 />
-<div class="px-40 pt-20">
+<div class="px-20 mt-32 font-mono">
     <div class="flex mb-4 py-5 shadow-2xl pb-16">
-        <div class="w-1/6 h-12 pl-10 "><img src ="~assets/avatar/5.png" class="h-20"></div>
+        <div class="w-1/6 h-12 pl-10">
+        <button class="bg-indigo hover:bg-indigo-dark text-white font-bold py-2 px-4 w-full inline-flex items-center">
+         <img src ="~assets/avatar/5.png" class="h-20">
+        </button>
+        </div>
         <div class="w-5/6  h-12">
-        <h1 class="text-2xl font-bold">Maribel Sapugay</h1>
-        <p class="text-xs">renghianbel2124@gmail.com</p>
+        <h1 class="text-3xl font-bold">Jane Doe</h1>
+        <p class="text-base font-mono">unknown@gmail.com</p>
         <nav class="flex flex-col sm:flex-row">
-            <button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none text-green-500 border-b-2 font-medium  border-green-500">
-                Profile
-            </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none hover:text-green-500 border-b-2 border-white hover:font-medium hover:border-green-500">
-                Application
-            </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none hover:text-green-500 border-b-2  border-white hover:font-medium hover:border-green-500">
-                Help
+            <button class="active">
+                 <nuxt-link to="/profile"> Profile</nuxt-link>
+            </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none">
+                <nuxt-link to="/transaction">Application</nuxt-link>
+            </button><button class="text-gray-600 py-4 px-6 block hover:text-green-700 focus:outline-none">
+               <nuxt-link to="/Help"> Help</nuxt-link>
                 </button>
         </nav>
         </div>
         <div class="w-1/5">
-            <button class="flex transition duration-500 ease-in-out -ml-10 text-sm  py-2 leading-none rounded text-gray-900 hover:text-white bg-green-500 hover:bg-green-700 mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110  text-base px-8 py-5" @click="toggleModal"> 
-                <img src="~assets/svg/icon-file.svg" class="h-5 " />
-                Select Transaction </button>
-            <div v-if="modal" @click.self="toggleModal" class="w-screen fixed z-50 pin bg-smoke top-0 left-0">
-            <div class="flex justify-center py-32" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease">
-                <span @click="toggleModal" class="absolute pl-64 ml-32 pt-5">
-              <svg class="h-12 w-12 text-white hover:text-gray-100  transform hover:-translate-y-1 hover:scale-105" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
-            </span>
-                <div class="w-2/5 cursor-pointer border bg-white rounded flex flex-col justify-center items-center text-center p-6 ">
-                    <span class="flex text-2xl font-bold text-gray-900">
-                                <img class="h-10" src="@/assets/svg/icon-search.svg" /> Select Transanction</span>
-                    <div class="flex pt-5">
-                            <div class="px-2 py-2 m-2 bg-gray-400 shadow-md transform hover:-translate-y-1 hover:scale-105 rounded">
-                                <img class="h-20" src="@/assets/images/cityofmati1.png" />
-                            </div>
-                            <div class="px-2 py-2 m-2 bg-gray-400 shadow-md transform hover:-translate-y-1 hover:scale-105 rounded">
-                                <img class="h-20" src="@/assets/images/cityofmati1.png" />
-                            </div>
-                    </div>
-                    <div class="flex">
-                            <div class="px-2 py-2 m-2 bg-gray-400 shadow-md transform hover:-translate-y-1 hover:scale-105 rounded">
-                                <img class="h-20" src="@/assets/images/cityofmati1.png" />
-                            </div>
-                            <div class="px-2 py-2 m-2 bg-gray-400 shadow-md transform hover:-translate-y-1 hover:scale-105 rounded">
-                                <img class="h-20" src="@/assets/images/cityofmati1.png" />
-                            </div>
-                    </div>
-                    <div class="flex">
-                            <div class="px-2 py-2 m-2 bg-gray-400 shadow-md transform hover:-translate-y-1 hover:scale-105 rounded">
-                                <img class="h-20" src="@/assets/images/cityofmati1.png" />
-                            </div>
-                            <div class="px-2 py-2 m-2 bg-gray-400 shadow-md transform hover:-translate-y-1 hover:scale-105 rounded">
-                                <img class="h-20" src="@/assets/images/cityofmati1.png" />
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
+            <modal />
     </div>
-    <div class="flex mb-4 pb-16">
-        <div class="w-1/3 bg-white rounded shadow" data-aos="fade-down-left">
-         <div class="flex mt-4 p-1 m-1">
-            <h5 class="text-grey-darkest text-sm"><b>Personal Information</b></h5>
-            <div class="ml-16">
-                <button href="#" style="float:right" class="text-md transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Edit</button>
-           </div>
+    </div>
+    <div class="flex mb-4 pb-16 bg-white" v-show="isEdit === true">
+          <h1 class="text-lg"><b>Edit Profile</b></h1>
+          <div class="px-10 py-10">
+              <img src ="@/assets/images/avatar.png" class="h-20 py-2 pl-10 align-center">
+    <label class="text-sm transition duration-500 ease-in-out inline-block text-sm px-10 py-2 px-12 leading-none text-white hover:text-white bg-green-500 hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">
+        Upload Photo
+        <input type='file' class="hidden" />
+    </label>
+</div>
+      <div class="bg-transparent shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+  <div class="-mx-3 md:flex mb-6">
+    <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+        First Name
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Firstname">
+      <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+     <div class="md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+        Middle Name
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="MiddleName">
+    <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+    <div class="md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+        Last Name
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="Lastname">
+    <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+  </div>
+  <div class="-mx-3 md:flex mb-6">
+    <div class="md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+        Email Address
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="Email Address">
+    <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+    <div class="md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+     Mobile
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="Mobile Number">
+    <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+  </div>
+  <div class="-mx-3 md:flex mb-6">
+    <div class="md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+        Address
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="Address">
+    <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+  </div>
+  <div class="w-1/5 relative">
+  <button href="#" @click="back()" class=" text-md transition duration-500 ease-in-out text-sm px-4 py-2 leading-none text-black hover:text-white bg-white hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Cancel</button>
+  <button href="#" @click="UpdateSubmit ()" class=" text-md transition duration-500 ease-in-out text-sm px-4 py-2 leading-none text-white hover:text-white bg-green-500 hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Update Profile</button>
+  </div>
+</div>
+    </div>
+    <div class="flex pb-16" v-show="isEdit === false">
+        <div class="w-1/3" data-aos="fade-down-left">
+        <div class="block">
+            <div class="bg-white rounded  shadow-2xl">
+         <div class="flex mt-4 px-5 py-5">
+            <h5 class="text-black font-mono font-bold text-lg pr-5 py-2">Personal Information</h5>
+            <button class="flex text-base transition duration-500 ease-in-out px-4 py-2 text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded transform hover:-translate-y-1 hover:scale-110" @click="Updateprofile">
+                <img src="~assets/svg/icon-edit.svg" />  Edit</button>
            </div>
             <div class="border-b-2 m-0 px-2"></div>
             <div class="p-2 m-2">
-                <table class="table-fixed">
-                     <tbody class="text-xs">
-                        <tr>
+                    <table class="table-fixed">
+                     <tbody class="text-base">
+                        <tr class="bg-gray-100">
                         <td class="border px-4 py-2">Firstname:</td>
                         <td class="border px-4 py-2">Unknown</td>
                         </tr>
@@ -78,7 +110,7 @@
                         <td class="border px-4 py-2">Middlename:</td>
                         <td class="border px-4 py-2">Unknown</td>
                         </tr>
-                        <tr>
+                        <tr class="bg-gray-100">
                         <td class="border px-4 py-2">Lastname:</td>
                         <td class="border px-4 py-2">Unknown</td>
                         </tr>
@@ -86,7 +118,7 @@
                         <td class="border px-4 py-2">Email Address:</td>
                         <td class="border px-4 py-2">unknown@gmail.com</td>
                         </tr>
-                        <tr>
+                        <tr class="bg-gray-100">
                         <td class="border px-4 py-2">Mobile Number:</td>
                         <td class="border px-4 py-2">12345678901</td>
                         </tr>
@@ -97,43 +129,84 @@
                      </tbody>
                 </table>
             </div>
-        </div>
-        <div class="w-2/3 bg-white rounded ml-4 shadow w-full" data-aos="fade-down-right">
-        <div class="flex mt-4 p-4 m-4">
-            <h5 class="text-grey-darkest"><b>Transaction History (0)</b></h5>
-            <div class="border-b-2 m-0 px-2"></div>
-            <div  style="float:right">
-                <select class="form-select mt-1 block w-full" style="float:right">
-                    <option></option>
-                    <option>1 per page</option>
-                    <option>2 per page</option>
-                    <option>3 per page</option>
-                    <option>4 per page</option>
-                    <option>5 per page</option>
-                </select>
+            </div>
+            <div class="mt-5 p-2 py-5 bg-white text-center rounded  shadow-2xl">
+                <span class="text-lg font-bold">We Accept Payment Via:</span>
+                <img src="~assets/images/payment.jpg" class="pt-5"/>
+            </div><br>
+            <div class="p-2 py-5 back text-center rounded  shadow-2xl">
+                <img src="~assets/images/cityofmati.png" class="px-5 py-5"/>
+                <span class="text-lg text-white font-bold">Need Help? Contact Us</span>
+            </div><br>
+            <div class="p-2 py-5 bg-white text-left rounded  shadow-2xl">
+                <div class="border-b-2 border-gray-300 pb-2">
+                    <span class="text-lg text-black ">Our Location</span>
+                </div>
+                <div class="flex border-b-2 border-gray-300 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-5" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 6.243 6.377 6.903 8 16.398 1.623-9.495 8-10.155 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.342-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                    <span class="text-base text-black ">City of Mati, Davao del Sur, Philippines</span>
+                </div>
+                <div class="flex border-b-2 border-gray-300 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-5" width="24" height="24" viewBox="0 0 24 24"><path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z"/></svg>
+                    <span class="text-base text-black "> +63 (2) 85277804</span>
+                </div>
+                <div class="flex border-b-2 border-gray-300 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-5" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg>
+                    <span class="text-base text-black "> cityofmati@gmail.com</span>
+                </div>
             </div>
         </div>
-        <div class="flex flex-no-wrap bg-gray-200">
-            <div class="w-1/5 flex-none p-2">
-                 <select class="form-select mt-1 block w-full" style="float:right">
-                    <option></option>
-                    <option>Select Status</option>
-                 </select>
-            </div>
-            <div class="w-3/5 flex-none p-2">
-                  <input class="w-64 ml-10 rounded mb-8 focus:outline-none focus:shadow-outline shadow-lg" placeholder="Search by transaction ID">
-                  <button href="#" class="text-md transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">      
-                      <svg class="fill-current pointer-events-none text-grey-darkest w-4 h-4 inline" src="~assets/svg/icon-search.svg" viewBox="0 0 20 20">
-		                <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
-	                  </svg> Search</button>
-            </div>
-        <div class="w-1/5 flex-none p-2">
-        <button href="#" class="flex text-md transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-black hover:text-black bg-white hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">
-            Refresh</button>
+        
         </div>
+        <div class="w-2/3  ml-4   w-full" data-aos="fade-down-right">
+        <div class="bg-white shadow-2xl">
+        <div class="flex mt-4 px-5 py-5 bg-white rounded border-b-2 border-gray-400">
+            <h5 class="text-black text-lg mt-3 mr-56"><b>Transaction History (0)</b></h5>
+                <div class="relative ml-64">
+                    <select class="block appearance-none border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                        <option>1 per page</option>
+                        <option>2 per page</option>
+                        <option>3 per page</option>
+                        <option>4 per page</option>
+                        <option selected>5 per page</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
         </div>
-        <div class="flex mt-4 p-4 m-4">
-            <center><img src ="@/assets/images/no_item.jpg" width="30%"></center>
+        <div class="flex flex-no-wrap px-4 py-4 w-full">
+                 <div class="relative">
+                    <select class="block appearance-none w-full  border border-gray-200 text-gray-700 py-3 px-4 pr-20 rounded leading-tight focus:outline-none focus:bg-white hover:border-gray-500" id="grid-state">
+                        <option selected>Select Status</option>
+                        <option>PENDING</option>
+                        <option>RECIEVED</option>
+                        <option>FOR CHECKING</option>
+                        <option>FOR APPEARANCE</option>
+                        <option>WAITING FOR PAYMENT</option>
+                        <option>REJECT</option>
+                        <option>PAID</option>
+                        <option>FOR PICK-UP</option>
+                        <option>PENDING LAB TEST</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+                <div class="relative  ml-10">
+                    <input class="pr-20 appearance-none  border border-gray-200 text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" placeholder="Search by transaction ID">
+                        <button href="#" class="text-md transition duration-500 ease-in-out inline-block  py-3 px-4 pr-8 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded  lg:mt-0 transform hover:-translate-y-1 hover:scale-110">      <svg class="fill-current pointer-events-none text-grey-darkest w-4 h-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+		                    <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+	                        </svg> Search
+                        </button>
+                </div> 
+                    <button class="ml-10 flex text-md transition duration-500 ease-in-out inline-block  text-black hover:text-xl py-2 px-2 transform hover:-translate-y-1 hover:scale-110"><img src="~assets/svg/icon-refresh.svg" /> Refresh
+                    </button>  
+        </div>
+        <div class="flex mt-4 p-4 m-4 justify-center">
+            <img src ="@/assets/images/empty.svg" >
+        </div>
+        <p class="text-lg text-center text-gray-600 pb-10"> No Item Found</p>
         </div>
     </div>
     <!-- <div class="flex mb-4 pb-16 bg-gray-500">
@@ -145,18 +218,42 @@
     </div> -->
 </div> 
 </div>
-<Footer />
+<Footer2 />
 </div>
 </template>
-
 <script>
-import Logout from '~/components/Logout.vue' 
-import Footer from '~/components/Footer.vue'
+import Navbar2 from '~/components/Navbar2.vue' 
+import Footer2 from '~/components/Footer2.vue'
+import modal from '~/components/modal.vue'
+
 export default {
      name: 'HelpComponent',
     components: {
-        Logout,
-        Footer
+        Navbar2,
+        Footer2,
+        modal
+    },
+    data () {
+        return {
+            modal: false,
+            isEdit: false,
+        }
+    },
+    methods: {
+        toggleModal() {
+        this.modal = !this.modal
+    },
+    Updateprofile () {
+            this.isEdit = true
+        },
+        UpdateSubmit () {
+            this.edit = false
+            this.$router.back()
+        },
+        back () {
+            this.edit = false
+            this.$router.back()
+        }
     }
 }
 </script>
@@ -168,4 +265,11 @@ export default {
         font-weight: bold;
         padding: 1rem;
     }
+.bg-smoke {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.back {
+  background-image: url("~assets/images/about.jpg");
+  background-repeat: no-repeat;
+}
 </style>

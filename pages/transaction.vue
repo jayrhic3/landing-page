@@ -1,15 +1,11 @@
 <template>
 <div>
-    <Logout />
-<div class="px-20 mt-20">
+    <Navbar2 />
+<div class="px-20 mt-32">
     <div class="flex mb-4 py-5 shadow-2xl pb-16">
         <div class="w-1/6 h-12 pl-10">
         <button class="bg-indigo hover:bg-indigo-dark text-white font-bold py-2 px-4 w-full inline-flex items-center">
-         <!-- <svg fill="#FFF" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
-                    </svg> -->
-        <img src ="@/assets/images/avatar.png" class="h-20">
+         <img src ="~assets/avatar/5.png" class="h-20">
         </button>
         </div>
         <div class="w-5/6  h-12">
@@ -25,11 +21,13 @@
                 </button>
         </nav>
         </div>
-        <div class="w-1/5 "><button href="#" class=" text-md transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-green-500 hover:bg-green-700 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Select Transaction</button></div>
+        <div class="w-1/5 ">
+            <modal />
+        </div>
     </div>
     <!-- <div class="box help-content">
     <code v-if="lang ==='profile'"> -->
-    <div class="flex mb-4 pb-16 bg-white"  data-aos="fade-up">
+    <div class="flex mb-4 pb-16 bg-white shadow-2xl" style="min-height:80vh"  data-aos="fade-down">
         <div class="flex mb-4 mx-auto px-2 sm:px-4">
         <div class="py-8">
             <div>
@@ -75,29 +73,21 @@
                         </svg>
                     </span>
                     <input placeholder="Search Transaction ID"
-                        class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
+                        class="text-base appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block  pr-6 text-right py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                 </div>
                 <div class="block relative">
                     <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
-                        <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">
-                            <path
-                                d="M10 4a6 6 0 100 12 6 6 0 000-12zm-8 6a8 8 0 1114.32 4.906l5.387 5.387a1 1 0 01-1.414 1.414l-5.387-5.387A8 8 0 012 10z">
-                            </path>
-                        </svg>
+                        <label class="text-left text-base">Date From: </label>
                     </span>
-                    <input placeholder="Date From:" type="date"
-                        class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
+                    <input type="date"
+                        class="text-base pl-16 text-right appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                 </div>
                 <div class="block relative">
                     <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
-                        <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">
-                            <path
-                                d="M10 4a6 6 0 100 12 6 6 0 000-12zm-8 6a8 8 0 1114.32 4.906l5.387 5.387a1 1 0 01-1.414 1.414l-5.387-5.387A8 8 0 012 10z">
-                            </path>
-                        </svg>
+                        <label class="text-left text-base">Date To: </label>
                     </span>
-                    <input placeholder="Date To:" type="date"
-                        class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
+                    <input type="date"
+                        class="text-base pl-12 text-right appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block  py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                 </div>
                 <div class="block relative">
                 <button href="#" style="float:right" class="text-md h-10 transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Filter</button>
@@ -170,17 +160,20 @@
 <!-- </code>
     </div> -->
 </div>
-<Footer />
+<Footer2 />
 </div>
 </template>
 <script>
-import Logout from '~/components/Logout.vue' 
-import Footer from '~/components/Footer.vue'
+import Navbar2 from '~/components/Navbar2.vue' 
+import Footer2 from '~/components/Footer2.vue'
+import modal from '~/components/modal.vue'
+
 export default {
      name: 'HelpComponent',
     components: {
-        Logout,
-        Footer
+        Navbar2,
+        Footer2,
+        modal
     }
 }
 </script>
