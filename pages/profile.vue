@@ -25,7 +25,7 @@
             <modal />
     </div>
     </div>
-    <div class="flex mb-4 pb-16 bg-white font-mono" v-show="isEdit === true">
+    <div class="flex mb-4 pb-16 bg-white font-mono shadow-2xl" v-show="isEdit === true">
         <div class="block">
           <h1 class="text-lg font-bold px-10 py-10">Edit Profile</h1>
           <div class="px-10 justify-center">
