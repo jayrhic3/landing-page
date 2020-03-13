@@ -177,7 +177,7 @@
         </div>
         <div class="flex flex-no-wrap px-4 py-4 w-full">
                  <div class="relative">
-                    <select class="block appearance-none w-full  border border-gray-200 text-gray-700 py-3 px-4 pr-20 rounded leading-tight focus:outline-none focus:bg-white hover:border-gray-500" id="grid-state">
+                    <select class="block appearance-none w-full  border border-gray-200 text-gray-700 py-3 px-4 pr-10 rounded leading-tight focus:outline-none focus:bg-white hover:border-gray-500" id="grid-state">
                         <option selected>Select Status</option>
                         <option>PENDING</option>
                         <option>RECIEVED</option>
@@ -193,9 +193,9 @@
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
-                <div class="relative  ml-10">
-                    <input class="pr-20 appearance-none  border border-gray-200 text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" placeholder="Search by transaction ID">
-                        <button href="#" class="text-md transition duration-500 ease-in-out inline-block  py-3 px-4 pr-8 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded  lg:mt-0 transform hover:-translate-y-1 hover:scale-110">      <svg class="fill-current pointer-events-none text-grey-darkest w-4 h-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <div class="relative ml-5">
+                    <input class=" appearance-none  border border-gray-200 text-gray-700 py-3 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" placeholder="Search by transaction ID">
+                        <button href="#" class="text-md transition duration-500 ease-in-out inline-block  py-3 px-4  leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded  lg:mt-0 transform hover:-translate-y-1 hover:scale-110">      <svg class="fill-current pointer-events-none text-grey-darkest w-4 h-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
 		                    <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
 	                        </svg> Search
                         </button>
