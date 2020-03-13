@@ -8,7 +8,7 @@
          <img src ="~assets/avatar/5.png" class="h-20">
         </button>
         </div>
-        <div class="w-5/6  h-12">
+        <div class="w-1/2  h-12">
         <h1 class="text-3xl font-bold">Jane Doe</h1>
         <p class="text-base font-mono">unknown@gmail.com</p>
         <nav class="flex flex-col sm:flex-row">
@@ -21,7 +21,7 @@
                 </button>
         </nav>
         </div>
-        <div class="w-1/5">
+        <div class="w-1/2 px-10 pl-64">
             <modal />
     </div>
     </div>
@@ -161,7 +161,7 @@
         <div class="w-2/3  ml-4   w-full" data-aos="fade-down-right">
         <div class="bg-white shadow-2xl">
         <div class="flex mt-4 px-5 py-5 bg-white rounded border-b-2 border-gray-400">
-            <h5 class="text-black text-lg mt-3 mr-56"><b>Transaction History (0)</b></h5>
+            <h5 class="text-black text-lg mt-3 mr-32"><b>Transaction History (0)</b></h5>
                 <div class="relative ml-64">
                     <select class="block appearance-none border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option>1 per page</option>
