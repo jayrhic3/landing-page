@@ -100,7 +100,7 @@
         <div class="w-1/3" data-aos="fade-down-left">
         <div class="block">
             <div class="bg-white rounded  shadow-2xl">
-         <div class="flex mt-4 px-5 py-5">
+         <div class="flex px-5 py-5">
             <h5 class="text-black font-mono font-bold text-lg pr-5 py-2">Personal Information</h5>
             <button class="flex text-base transition duration-500 ease-in-out px-4 py-2 text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded transform hover:-translate-y-1 hover:scale-110" @click="Updateprofile">
                 <img src="~assets/svg/icon-edit.svg" />  Edit</button>
@@ -167,7 +167,7 @@
         </div>
         <div class="w-2/3  ml-4   w-full" data-aos="fade-down-right">
         <div class="bg-white shadow-2xl">
-        <div class="flex mt-4 px-5 py-5 bg-white rounded border-b-2 border-gray-400">
+        <div class="flex px-5 py-5 bg-white rounded border-b-2 border-gray-400">
             <h5 class="text-black text-lg mt-3 mr-32"><b>Transaction History (0)</b></h5>
                 <div class="relative ml-64">
                     <select class="block appearance-none border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">

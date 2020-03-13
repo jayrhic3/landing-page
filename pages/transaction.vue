@@ -95,10 +95,14 @@
                         class="text-base pl-12 text-right appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block  py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                 </div>
                 <div class="block relative">
-                <button href="#" style="float:right" class="text-md h-10 transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Filter</button>
+                <button href="#" style="float:right" class="flex text-md h-10 transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-white hover:text-white bg-gray-700 hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="mr-1" viewBox="0 0 24 24"><path d="M1 0l9 15.094v5.906l4 3v-8.906l9-15.094h-22zm18.479 2l-2.981 5h-8.996l-2.981-5h14.958z"/></svg>
+                    Filter</button>
                 </div>
                 <div class="block relative">
-                <button href="#" style="float:right" class="text-md h-10 transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-black hover:text-white bg-white hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">Clear</button>
+                <button href="#" style="float:right" class="flex text-md h-10 transition duration-500 ease-in-out inline-block text-sm px-4 py-2 leading-none text-black hover:text-white bg-white hover:bg-gray-500 rounded mt-4 lg:mt-0 transform hover:-translate-y-1 hover:scale-110">
+                    <svg width="24" height="24" class="mr-1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M5.662 23l-5.369-5.365c-.195-.195-.293-.45-.293-.707 0-.256.098-.512.293-.707l14.929-14.928c.195-.194.451-.293.707-.293.255 0 .512.099.707.293l7.071 7.073c.196.195.293.451.293.708 0 .256-.097.511-.293.707l-11.216 11.219h5.514v2h-12.343zm3.657-2l-5.486-5.486-1.419 1.414 4.076 4.072h2.829zm6.605-17.581l-10.677 10.68 5.658 5.659 10.676-10.682-5.657-5.657z"/></svg>
+                    Clear</button>
                 </div>
             </div>
             <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
